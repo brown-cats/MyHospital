@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/titleView"
+        android:layout_width="138dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/info_title"
+        android:textSize="@dimen/title_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/info_iconView"
+        android:layout_width="140dp"
+        android:layout_height="132dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/returnButton"
+        tools:srcCompat="@tools:sample/avatars"
+        app:srcCompat="@drawable/icon1" />
+
+    <TextView
+        android:id="@+id/info_name"
+        android:layout_width="133dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="76dp"
+        android:text="Name"
+
+        android:textSize="@dimen/title_size"
+        app:layout_constraintStart_toEndOf="@+id/info_iconView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="115dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="156dp"
+        android:text="医生简介"
+        android:textSize="@dimen/title_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/info_iconView" />
+
+    <ScrollView
+        android:layout_width="376dp"
+        android:layout_height="275dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintVertical_bias="0.567">
+
+        <TextView
+            android:id="@+id/info_longText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:text="@string/info_text"
+            android:textSize="@dimen/subtitle_size" />
+    </ScrollView>
+
+    <ImageButton
+        android:id="@+id/returnButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_return"
+
+
+        />
+
+    <TextView
+        android:id="@+id/info_sexText"
+        android:layout_width="81dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="36dp"
+        android:textSize="@dimen/subtitle_size"
+        android:text="Age"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/info_iconView" />
+
+    <TextView
+        android:id="@+id/info_ageText"
+        android:layout_width="81dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginLeft="44dp"
+        android:layout_marginTop="36dp"
+        android:textSize="@dimen/subtitle_size"
+        android:text="Sex"
+        app:layout_constraintStart_toEndOf="@+id/info_sexText"
+        app:layout_constraintTop_toBottomOf="@+id/info_iconView"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/info_office"
+        android:layout_width="81dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginLeft="44dp"
+        android:layout_marginTop="120dp"
+        android:text="Office"
+        android:textSize="@dimen/subtitle_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/info_ageText"
+        app:layout_constraintTop_toBottomOf="@+id/info_name"
+        tools:ignore="MissingConstraints" />
+
+</android.support.constraint.ConstraintLayout>
